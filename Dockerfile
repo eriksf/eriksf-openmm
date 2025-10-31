@@ -28,8 +28,9 @@ RUN wget -q -P /tmp https://github.com/conda-forge/miniforge/releases/download/2
     && conda clean -ay
 
 # install openmm
-RUN conda install --yes --no-update-deps \
+RUN conda install -c nvidia/label/cuda-12.9.0 --yes --no-update-deps \
     openmm \
-    cuda-version=12 \
+    cuda-version=12.9 \
+    cuda \
     && conda clean -ay
 
