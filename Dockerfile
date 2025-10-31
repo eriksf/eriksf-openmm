@@ -11,4 +11,4 @@ RUN apt update \
     && rm -rf /var/lib/apt/lists/*
 
 # install scipy
-RUN pip install scipy
+RUN pip install -U --no-deps scipy==1.10.1
